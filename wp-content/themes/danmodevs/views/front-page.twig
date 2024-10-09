@@ -1,0 +1,38 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+{% include "./components/_hero.twig" with {
+  'hero_title': 'dan moorhouse',
+  'hero_subtitle': 'bespoke web development services',
+  'theme_primary': '#0a143f'
+} %}
+<section class="section py-5">
+<div class="container pl-5">
+
+    <div class="content pl-5">
+    <div class="pl-5">
+      <p class="lead fz-20"><b>My services include creating lightweight, high-performance solutions tailored to your needs.</b></p>
+      <p class="lead fz-20"><b>My professional experience includes:</b></p>
+      <ul>
+        <li><strong>Drupal</strong> - Flexible and scalable CMS for complex websites. <a href="#" class="link-primary">See my Drupal services</a></li>
+        <li><strong>WordPress</strong> - User-friendly and highly customizable CMS. <a href="#" class="link-primary">See my WordPress services</a></li>
+        <li><strong>PHP</strong> - Robust and versatile for various applications.</li>
+      </ul>
+      <p class="lead"><b>I work directly with you, the client, ensuring:</b></p>
+      <ul>
+        <li>No add-on fees for project management or design.</li>
+        <li>No charge for scheduled meetings.</li>
+      </ul>
+      <p class="lead"><b>Let's build something great together!</b></p>
+      <div class="w-50">
+      {% include "./components/_chat-links.twig" %}
+      </div>
+</div>
+
+</div>
+</div>
+ 
+</section>
+
+{% endblock %}

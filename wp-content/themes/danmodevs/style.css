@@ -1,0 +1,122 @@
+/*
+ * Theme Name: danmodevs_portfolio_blog
+ * Description: Custom, one-off theme for my website. Created from Timber Starter theme. Using bulma css.
+ * Author: Upstatement and 
+*/
+
+
+@font-face {
+    font-family: Satoshi-Variable;
+    src: url(/wp-content/themes/danmodevs/fonts/Satoshi-Variable.ttf);
+}
+h1, h2, h3, h4, h5 {
+    font-family: "Satoshi-Variable", sans-serif;
+}
+h2 {
+    font-family: "Satoshi-Variable", sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.text-satoshi {
+    font-family: "Satoshi-Variable", sans-serif;
+}
+
+.bg-ghost-white {
+    background-color: #f4f4f9!important;
+}
+.text-ghost-white {
+    color: #f4f4f9!important;
+}
+p {
+    font-size: 17px;
+    font-family: "Satoshi-Variable", sans-serif;
+}
+.fz-17 {
+    font-size: 18px!important;
+}
+.fz-20 {
+    font-size: 20px!important;
+}
+.brad-150 {
+    border-radius: 120px!important;
+}
+fw-400 {
+    font-weight: 400!important;
+}
+fw-500 {
+    font-weight: 500!important;
+}
+nav a {
+    text-decoration: none;
+}
+.w-60 {
+    width:60%;
+}
+.w-100 {
+    width:100%;
+}
+.bg-dark-grey {
+    background-color: #2b2b2b;
+}
+.text-dark-grey {
+    color: #1b1b1b;
+}
+.service-card-text-left {
+    margin-right: -100px;
+}
+.service-card-text-right {
+    margin-left: -100px;
+}
+input[type=submit] {
+    background-color: rgb(46, 46, 190);
+    color:#f4f4f9;
+    border: 0px;
+    padding:10px;
+}
+.icon-bar {
+    position: fixed;
+    top: 60%;
+    transform: translateY(-50%);
+  }
+  
+  .icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 14px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 15px;
+  }
+  
+  .icon-bar a:hover {
+    background-color: #000;
+  }
+  
+  .facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .google {
+    background: #dd4b39;
+    color: white;
+  }
+  
+  .linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  
+  .youtube {
+    background: #bb0000;
+    color: white;
+  }
+
+
+  

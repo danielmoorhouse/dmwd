@@ -1,0 +1,33 @@
+{% extends "./base.twig" %}
+
+{% block content %}
+{% include "./components/_hero.twig" with {
+    'hero_title': post.title,
+} %}
+<section id="contact-me" class="py-5">
+<div class="container">
+<div class="row">
+<div class="col-6 px-4 py-5">
+<div class="card shadow px-4 py-4 mb-3">
+{{ post.content }}
+</div>
+
+</div>
+<div class="col-6 px-5 py-5">
+<div class="card shadow px-4 py-4">
+{{ post.meta('additional_content') }}
+<div class="py-4">
+{% include "./components/_chat-links.twig" %}
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+{% include "./components/alerts/alert-bg-dark.twig" with {
+    'bold_intro': 'Important' ,
+    'info_message': 'I aim to reply same day. Circumstances may extend that to the next day. If you have contacted me, rest assured, I will respond.',
+} %}
+</div>
+</section>
+{% endblock %}

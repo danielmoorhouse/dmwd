@@ -1,0 +1,60 @@
+{% extends "./base.twig" %}
+
+{% block content %}
+{% include "./components/_hero.twig" with {
+    'hero_title': post.title
+} %}
+{% set theme_primary = post.meta('page_primary_theme') %}
+<section class="text-satoshi">
+<div class="container px-4 py-5">
+<div class="row">
+
+<div class="col-9 px-4">
+<div class="card bg-ghost-white py-4 px-4 w-100" style="border: 0px!important;">
+<h4>bio</h4>
+{{ post.content }}
+{{ post.meta('additional_content') }}
+{{ post.meta('additional_content_2') }}
+</div>
+<br>
+
+</div>
+<div class="col-3 px-4 py-4 rounded bg-ghost-white">
+<h4>work history</h4>
+<div class="card text-ghost-white shadow py-2 px-3 w-100 mb-2" style="background-color:{{ theme_primary }}">
+<p class="pb-0"><strong>Pop Pop Studio</strong><br>
+<small>Contract Drupal Developer</small><br>
+<small>October 2024</small></p>
+</div>
+<div class="card text-ghost-white shadow py-2 px-3 w-100 mb-2" style="background-color:{{ theme_primary }}">
+<p class="pb-0"><strong>Headscape</strong><br>
+<small>Back-end Drupal Developer</small><br>
+<small>February 2023 to February 2024</small></p>
+</div>
+
+<div class="card text-ghost-white shadow py-2 px-3 w-100 mb-2" style="background-color:{{ theme_primary }}">
+<p><strong>Blackpool and The Fylde College</strong><br>
+<small>Lead Drupal Developer</small><br>
+<small>May 2019 to February 2023</small></p>
+</div>
+<div class="card text-ghost-white shadow py-2 px-3 w-100 mb-2" style="background-color:{{ theme_primary }}">
+<p><strong>Panache Dance Fitness</strong><br>
+<small>Contract Developer (WooCommerce)</small><br>
+<small>February 2020 to May 2020</small></p>
+</div>
+<h4>qualifications</h4>
+<div class="card text-ghost-white shadow py-2 px-3 w-100 mb-2" style="background-color:{{ theme_primary }}">
+<p><strong>BSc (Hons) Web Technologies</strong><br>
+<small>September 2018 to May 2019</small></p>
+</div>
+<div class="card text-ghost-white shadow py-2 px-3 w-100"  style="background-color:{{ theme_primary }}">
+<p><strong>FdSc (Foundation) Web Technologies</strong><br>
+<small>September 2016 to May 2018</small></p>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+{% endblock %}
+

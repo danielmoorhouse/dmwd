@@ -1,0 +1,22 @@
+  {% if post.meta('service_theme_primary') %}
+  {% set theme_primary = post.meta('service_theme_primary')  %}
+  {% elseif post.meta('page_primary_theme') %}
+    {% set theme_primary = post.meta('page_primary_theme')  %}
+  {% endif %}
+  
+  <section class="hero shadow-lg post-type-{{post.post_type}}" id="post-{{post.ID}}" style="min-height:20vh;overflow:hidden;background-color:{{ theme_primary }}">
+    <div class="hero-body">
+      <div class="container py-5">
+      <div class="row py-5">
+      <div class="col-12">
+   
+        <h1 class="text-ghost-white display-2">
+         {{ hero_title }}
+        </h1>
+      <p class="fz-20 fw-500 text-ghost-white px-2">{{ hero_subtitle }}</p>
+      </div>
+
+      </div>
+      </div> 
+    </div>
+  </section>

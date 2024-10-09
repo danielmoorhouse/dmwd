@@ -1,0 +1,71 @@
+{% extends "./base.twig" %}
+
+{% block content %}
+
+{% set created_with = post.meta('created_using') %}
+{% set text_1 = post.meta('project_description_1') %}
+{% set image_1 = post.meta('project_image_1') %}
+{% set text_2 = post.meta('project_description_2') %}
+{% set image_2 = post.meta('project_image_2') %}
+{% set text_3 = post.meta('project_description_3') %}
+{% set image_3 = post.meta('project_image_3') %}
+{% set tags = post.meta('tech_tags') %}
+
+
+{% include "./components/_hero.twig" with {
+    'hero_title': post.title,
+    'hero_subtitle': created_with
+} %}
+<section id="project-{{ post.ID }}">
+<div class="container py-5">
+
+<div class="row py-5 px-3">
+<div class="col-5 py-0">
+<div class="card service-card-text-left shadow px-4 py-3">
+<p>{{ text_1 }}</p>
+</div>
+</div>
+<div class="col-7 py-5">
+<div class="py-5">
+<img class="w-100" src="{{ image_1 }}" alt="{{ image_1.alt }}">
+</div>
+</div>
+</div>
+
+<div class="row py-5 px-3">
+<div class="col-7 py-5">
+<div class="py-5">
+<img class="w-100" src="{{ image_2 }}" alt="{{ image_2.alt }}">
+</div>
+</div>
+<div class="col-5 py-0">
+<div class="card service-card-text-right shadow px-4 py-3">
+<p>{{ text_2 }}</p>
+</div>
+</div>
+</div>
+<div class="row pt-5 px-3">
+<div class="col-5 py-0">
+<div class="card service-card-text-left shadow px-4 py-3">
+<p>{{ text_3 }}</p>
+</div>
+</div>
+<div class="col-7 pt-5">
+<div class="py-5">
+<img class="w-100" src="{{ image_3 }}" alt="{{ image_3.alt }}">
+</div>
+</div>
+</div>
+</div>
+<div class="container py-3 px-5 pb-5 text-satoshi bg-ghost-white brad-150">
+<h3>tags</h3>
+{% for tag in tags %}
+
+{% set term = get_term(tag) %}
+<span class="badge bg-primary fz-17">{{ term }}</span>
+    
+{% endfor %}
+</div>
+
+</section>
+{% endblock %}

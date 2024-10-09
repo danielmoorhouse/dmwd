@@ -1,0 +1,42 @@
+{% if menu %}
+
+    <ul class="navbar-nav">
+	{% for item in items %}
+	{% if item.children %}
+		{% set children = true %}
+		{% set nav_link_classes = "nav-link px-4 dropdown-toggle" %}
+		{% set list_classes = "nav-item dropdown" %}
+		{% set link_classes = "dropdown-item" %}
+		{% set attributes = 'data-bs-toggle="dropdown"  aria-expanded="false"' %}
+	{% else %}
+		{% set nav_link_classes = "nav-link px-4" %}
+		{% set list_classes = "nav-item" %}
+		{% set link_classes = "dropdown-item" %}
+		{% set attributes = '' %}
+	{% endif %}
+	
+
+	 <li class="{{ list_classes }}">
+          <a class="{{ nav_link_classes }}" target="{{ item.target }}" {{ attributes }} href="{{ item.link }}">{{ item.title }}</a>
+			{# {% include "menu.twig" with {'items': item.children} %} #}
+
+			{% if children %}
+
+			<ul class="dropdown-menu">
+
+			{% for child in item.children %}
+
+				<li><a class="{{ link_classes }}" target="{{ child.target }}" href="{{ child.link }}">{{ child.title }}</a></li>
+
+			{% endfor %}
+            
+          </ul>
+			
+			{% endif %}
+			
+
+		</li>
+	{% endfor %}
+	</ul>
+	
+{% endif %}
